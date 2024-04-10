@@ -27,7 +27,7 @@ usuarioid int null,
 INSERT INTO ouvir_etc_db.usuario (id, nome, email, password, tipousuario)
 VALUES
 (100, 'admin', 'admin@email.com', 'secret', 'ADMIN' ),
-(101, 'user01', 'user01@email.com', 'secret', 'USUARIO' ),
+(101, 'user01', 'user01@email.com', 'secret', 'USUARIO' );
 
 INSERT INTO ouvir_etc_db.relato (id, dataabertura, titulo, descricao,  tipo, usuarioid, status, dataconclusao)
 VALUES
