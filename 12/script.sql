@@ -4,7 +4,7 @@ CREATE DATABASE ouvir_etc_db;
 
 USE ouvir_etc_db;
 
-CREATE TABLE ouvir_etc_db.usuario(
+CREATE TABLE ouvir_etc_db.usuarios (
 id int PRIMARY KEY not null,
 nome varchar(150) not null,
 email varchar(200) not null unique,
@@ -12,7 +12,7 @@ password varchar(80) not null,
 tipousuario ENUM('ADMIN', 'USUARIO', 'ANALISTA') NOT NULL DEFAULT('USUARIO'),
 statususuario boolean DEFAULT(true)
 );
-CREATE TABLE ouvir_etc_db.relato(
+CREATE TABLE ouvir_etc_db.relatos (
 id int PRIMARY KEY not null,
     dataabertura datetime not null,
     dataconclusao datetime null,
@@ -21,15 +21,15 @@ id int PRIMARY KEY not null,
     tipo ENUM('SUGESTAO', 'ELOGIO', 'RECLAMACAO') NOT NULL DEFAULT('RECLAMACAO'),
     status ENUM('ABERTA', 'CANCELADA', 'CONCLUIDA', 'PENDENTE') NOT NULL DEFAULT('ABERTA'),
 usuarioid int null,
-    FOREIGN KEY (usuarioid) REFERENCES ouvir_etc_db.usuario(id)
+    FOREIGN KEY (usuarioid) REFERENCES ouvir_etc_db.usuarios(id)
 );
 
-INSERT INTO ouvir_etc_db.usuario (id, nome, email, password, tipousuario)
+INSERT INTO ouvir_etc_db.usuarios (id, nome, email, password, tipousuario)
 VALUES
 (100, 'admin', 'admin@email.com', 'secret', 'ADMIN' ),
 (101, 'user01', 'user01@email.com', 'secret', 'USUARIO' );
 
-INSERT INTO ouvir_etc_db.relato (id, dataabertura, titulo, descricao,  tipo, usuarioid, status, dataconclusao)
+INSERT INTO ouvir_etc_db.relatos (id, dataabertura, titulo, descricao,  tipo, usuarioid, status, dataconclusao)
 VALUES
 (10000, '2024-03-01 08:00:00', 'Aumentar número de catracas', 'Aumentar número de catracas na entrada da escola.', 'SUGESTAO', NULL, 'CONCLUIDA','2024-03-01 08:00:00'),
 (10001, '2024-03-02 09:00:00', 'Não fechar portão', 'Não fechar portão de entrada e saída na hora do intervalo.', 'SUGESTAO', NULL, 'CONCLUIDA', '2024-03-02 09:00:00'),
