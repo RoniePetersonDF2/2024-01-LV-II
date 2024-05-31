@@ -1,0 +1,44 @@
+.btn {
+    background-color: cornflowerblue;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 8px 30px;
+    text-decoration: none; 
+    border: none;
+    display: inline;
+    width: 9rem;
+    height: 1.5rem;
+    text-align: center;
+  }
+  
+  .btn-voltar {
+    background-color: cadetblue;
+  }
+  
+  .btn-elogio {
+    background-color: gold;
+  }
+  
+  .btn-reclamacao {
+    background-color: firebrick;
+  }
+  
+  .btn-outros {
+    background-color: #194494;
+  }
+  
+  .btn-usuarios {
+    background-color: tomato;
+  }
+  
+  .btn-button {
+    margin: 0;
+    padding: 10px 60px;
+    text-align: center;
+    border: none;
+    color: #fff;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    font-weight: 600;
+  }
