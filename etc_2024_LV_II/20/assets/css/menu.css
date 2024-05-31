@@ -1,0 +1,20 @@
+.nav-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: cornflowerblue;
+    min-height: 2.7rem;
+}
+
+.nav-principal a {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 1rem 1.8rem;
+}
+
+.nav-principal a:hover {
+    font-size: 1.5rem;
+}

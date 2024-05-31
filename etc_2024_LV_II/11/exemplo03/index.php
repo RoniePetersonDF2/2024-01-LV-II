@@ -1,13 +1,10 @@
 <?php
+     header('Content-Type: text/html; charset=utf-8;');
+   
+    include 'src/conexao.php';
 
-    require 'src/conta.php';
-    require 'src/contaespecial.php';
-    require 'src/contaconjunta.php';
-
-    echo '<h1>Trabalhando com herança - Conta Especial Final</h1>';
-
-    $ce = new ContaEspecial(200.00, 100.00);
-
-    $ce->imprimirSaldo();
-
-    $ccj = new ContaConjunta();
+    $db = Conexao::getConexao();
+    if (isset($db)) 
+    {
+        echo 'Conexão com sucesso!';               
+    } 

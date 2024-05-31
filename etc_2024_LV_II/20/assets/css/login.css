@@ -1,0 +1,36 @@
+.login-title {
+    text-align: center;
+    color: cornflowerblue;
+    padding-bottom: 1.5rem;
+    width: 20rem;
+    margin: 20px auto;
+  }
+  
+  .login-form {
+    width: 20rem;
+    margin: 0 auto;
+  }
+  
+  .login-form input {
+    width: 18rem;
+    border: none;
+    border-bottom: 1px solid #194494;
+  
+  }
+  .login-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .login-links a {
+    padding: 10px;
+    color:#194494;
+    font-weight: 600;
+  }
+  
+  .container-form-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
