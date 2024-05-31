@@ -17,9 +17,12 @@ if (!isset($_SESSION['usuario'])) {
     header('Location: login.php');
     exit;
 }
-$carrinho[] = $produto;
-var_dump($_SESSION['usuario']['carrinho'], $carrinho); exit;
-$_SESSION['usuario']['carrinho'] = $carrinho;
 
+if ($_SESSION['usuario']['carrinho'] != null) {
+    $carrinho = $_SESSION['usuario']['carrinho'];    
+} 
+$carrinho[] = $produto;
+$_SESSION['usuario']['carrinho'] = $carrinho;
+// echo '<pre>';var_dump($_SESSION['usuario']['carrinho']); exit;
 header('Location: index.php');
 exit;
