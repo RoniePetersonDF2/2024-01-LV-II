@@ -21,8 +21,22 @@ if (!isset($_SESSION['usuario'])) {
 if ($_SESSION['usuario']['carrinho'] != null) {
     $carrinho = $_SESSION['usuario']['carrinho'];    
 } 
+
+$achouItemCarrinho = false;
+foreach($carrinho as $key => $item) {
+    if ($item['id'] == $id) {
+        $produto = $item;
+        $produto['quantidade'] = $item['quantidade'] + 1;        
+        $achouItemCarrinho = true;
+        unset($carrinho[$key]);
+        break;
+    }
+}    
+// echo '<pre>'; var_dump($produto); exit;
+if ($achouItemCarrinho == false) {
+    $produto['quantidade'] = 1;
+}
 $carrinho[] = $produto;
 $_SESSION['usuario']['carrinho'] = $carrinho;
-// echo '<pre>';var_dump($_SESSION['usuario']['carrinho']); exit;
 header('Location: index.php');
 exit;
