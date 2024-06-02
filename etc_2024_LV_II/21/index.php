@@ -44,7 +44,7 @@ $produtos = $dao->getAll();
         <?php foreach ($produtos as $produto) : ?>
             <div class="col-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="assets/img/<?=$produto['imagem']??'cafe.jpg'?>" class="card-img-top" alt="imagem de café" style="height: 22vh;">
                     <div class="card-body">
                         <h5 class="card-title"><?= $produto['nome']; ?></h5>
                         <p class="card-text"><?= $produto['descricao']; ?></p>
