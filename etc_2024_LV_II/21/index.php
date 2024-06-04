@@ -19,7 +19,7 @@ $produtos = $dao->getAll();
             </div>
         <?php else : ?>
             <div class="col-auto">
-                <a href="cart.php">Carrinho</a> 
+                <a href="carrinho/cart.php">Carrinho</a> 
             </div>
             <div class="col-auto">
                 <a href="logout.php">Logout</a>
@@ -51,7 +51,7 @@ $produtos = $dao->getAll();
                         <b>R$ <?= number_format($produto['preco'], 2, ',', '.'); ?></b>
                     </div>
                     <div class="card-footer">
-                        <a href="cart-add.php?id=<?= $produto['id'] ?>" class="btn btn-primary">Adicionar</a>
+                        <a href="carrinho/cart-add.php?id=<?= $produto['id'] ?>" class="btn btn-primary">Adicionar</a>
                     </div>
                 </div>
                 <br>
