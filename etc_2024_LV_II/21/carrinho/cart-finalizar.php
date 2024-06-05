@@ -22,6 +22,9 @@ foreach ($carrinho as $item) {
 <main class="container">
     <h1 class="mb-5">Finalizar compra</h1>
 
+    <p>
+        <a href="cart.php">Voltar</a>
+    </p>
     <hr>
 
     <h3>Cliente</h3>
