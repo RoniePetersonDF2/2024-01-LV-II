@@ -13,7 +13,7 @@ class LoginDAO
     {
         foreach ($this->usuarios as $usuario) {
             if ($usuario['nome'] == $nome && $usuario['password'] == $password ) {
-                return true;
+                return $usuario;
             }
         }
         return false;
