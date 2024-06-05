@@ -40,10 +40,10 @@ $produtos = $dao->getAll();
         </div>
     <?php endif; ?>
 
-    <div class="row">
+    <div class="row align-items-center">
         <?php foreach ($produtos as $produto) : ?>
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
+            <div class="col-xs col-md-6 col-lg-3">
+                <div class="card" style="min-width: 18rem;">
                     <img src="assets/img/<?=$produto['imagem']??'cafe.jpg'?>" class="card-img-top" alt="imagem de café" style="height: 22vh;">
                     <div class="card-body">
                         <h5 class="card-title"><?= $produto['nome']; ?></h5>
@@ -51,7 +51,10 @@ $produtos = $dao->getAll();
                         <b>R$ <?= number_format($produto['preco'], 2, ',', '.'); ?></b>
                     </div>
                     <div class="card-footer">
-                        <a href="carrinho/cart-add.php?id=<?= $produto['id'] ?>" class="btn btn-primary">Adicionar</a>
+                        <?php if (isset($_SESSION['usuario'])) : ?>
+                            <a href="carrinho/cart-add.php?id=<?= $produto['id'] ?>" class="btn btn-primary">Adicionar</a>
+                        <?php endif; ?>
+                        <a href="carrinho/cart-show.php?id=<?= $produto['id'] ?>" class="btn btn-success">Ver</a>
                     </div>
                 </div>
                 <br>
