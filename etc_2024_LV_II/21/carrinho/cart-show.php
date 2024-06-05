@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../config.php';
 include '../src/models/dao/produtodao.php';
 
@@ -12,7 +13,7 @@ if ($produto == false) {
     exit;
 }
 
-$preco = number_format($produto['preco'], 2,',', '.');
+$preco = number_format($produto['preco'], 2, ',', '.');
 
 ?>
 
@@ -38,11 +39,14 @@ $preco = number_format($produto['preco'], 2,',', '.');
             </p>
 
             <p class="card-text">
-            <b>R$: </b><?= $preco; ?>
+                <b>R$: </b><?= $preco; ?>
             </p>
         </div>
 
         <div class="card-footer text-center">
+            <?php if (isset($_SESSION['usuario'])) : ?>
+                <a href="cart-add.php?id=<?= $produto['id'] ?>" class="btn btn-primary">Adicionar</a>
+            <?php endif; ?>
             <a href="../index.php" class="btn btn-success">Voltar</a>
         </div>
     </div>
