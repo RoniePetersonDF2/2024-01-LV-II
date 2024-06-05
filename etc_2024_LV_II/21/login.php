@@ -5,15 +5,16 @@ include 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dao = new LoginDAO($array_usuarios);
-    $loginSuccesso = $dao->Login($_POST['nome'], $_POST['password']);
-    if (!$loginSuccesso) {
+    $usuario = $dao->Login($_POST['nome'], $_POST['password']);
+    if ($usuario == false) {
         session_destroy();
         header('Location: login.php?message=Usuário ou senha inválidos!&type=error');
         exit;
     } else {
         $_SESSION['usuario'] = [
-            'id'        => $_POST['id'],
-            'nome'      => $_POST['nome'],
+            'id'        => $usuario['id'],
+            'nome'      => $usuario['nome'],
+            'endereco'  => $usuario['endereco'],
             'carrinho'  => null,
         ];
         header('Location: index.php');
