@@ -78,21 +78,53 @@ $array_usuarios = [
         'id'        => 1,
         'nome'      => 'João',
         'password'  => '123',
+        'endereco'  => [
+            'logradouro'    => 'QE 19 Conjunto C',
+            'complemento'   => 'Casa',
+            'numero'        => '01',
+            'bairro'        => 'Guará II',
+            'cidade'        => 'Guara',
+            'cep'           => '71050-033',   
+        ],
     ],
     [
         'id'        => 2,
         'nome'      => 'Maria',
         'password'  => '123',
+        'endereco'  => [
+            'logradouro'    => 'QE 19 Conjunto E',
+            'complemento'   => 'Casa',
+            'numero'        => '11',
+            'bairro'        => 'Guará II',
+            'cidade'        => 'Guara',
+            'cep'           => '71050-035',   
+        ],
     ],
     [
         'id'        => 3,
         'nome'      => 'Pedro',
         'password'  => '123',
+        'endereco'  => [
+            'logradouro'    => 'SQS 216 Bloco A',
+            'complemento'   => 'Apartamento',
+            'numero'        => '101',
+            'bairro'        => 'Asa Sul',
+            'cidade'        => 'Brasília',
+            'cep'           => '71000-033',   
+        ],
     ],
     [
         'id'        => 4,
         'nome'      => 'Jacinta',
         'password'  => '123',
+        'endereco'  => [
+            'logradouro'    => 'QNO 19 Conjunto A',
+            'complemento'   => 'Lote',
+            'numero'        => '33',
+            'bairro'        => 'Setor O',
+            'cidade'        => 'Ceilândia',
+            'cep'           => '71088-023',   
+        ],
     ],
     
 ];
