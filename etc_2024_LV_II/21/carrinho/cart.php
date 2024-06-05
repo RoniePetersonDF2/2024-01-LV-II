@@ -20,7 +20,8 @@ $total = 0;
         </div>
         
         <div class="col">
-            <a href="cart-finalizar.php">Finalizar compras</a>
+            <a href="cart-finalizar.php"
+            onclick="return confirm('Deseja finalizar a operação?');">Finalizar compras</a>
         </div>
     </div>
 
